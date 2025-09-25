@@ -18,12 +18,18 @@ fig_engage = px.histogram(df, x='Engagement_Score', nbins=10, title="Engagement 
 st.plotly_chart(fig_engage)
 
 # Tenure Bucket Bar Chart
-fig_tenure = px.bar(df['Tenure_Bucket'].value_counts().reset_index(),
-                    x='index', y='Tenure_Bucket',
-                    title="Tenure Bucket Breakdown",
-                    labels={'index': 'Tenure Bucket', 'Tenure_Bucket': 'Customer Count'})
-st.plotly_chart(fig_tenure)
+tenure_counts = df['Tenure_Bucket'].value_counts().reset_index()
+tenure_counts.columns = ['Tenure_Bucket', 'Customer_Count']
 
+fig_tenure = px.bar(
+    tenure_counts,
+    x='Tenure_Bucket',
+    y='Customer_Count',
+    title="Tenure Bucket Breakdown",
+    labels={'Tenure_Bucket': 'Tenure Bucket', 'Customer_Count': 'Customer Count'}
+)
+
+st.plotly_chart(fig_tenure)
 # Filter by Contract Type
 contract_type = st.selectbox("Filter by Contract Type", df['Contract'].unique())
 filtered_df = df[df['Contract'] == contract_type]
