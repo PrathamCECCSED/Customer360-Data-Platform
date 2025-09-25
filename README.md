@@ -60,14 +60,14 @@ A cloud-native, enterprise-grade ETL and dashboarding solution built using real-
 ## 👤 Author
 
 **Pratham**  
-Final semester BTech student | Aspiring Data Engineer  
+Aspiring Data Engineer  
 Focused on building real-world, cloud-native data platforms using free tools and public datasets.
 
 ---
 
 ## 📬 Contact
 
-- [LinkedIn](https://www.linkedin.com/in/your-profile)
+- [LinkedIn](https://www.linkedin.com/in/prathamtaak/)
 - [GitHub](https://github.com/PrathamCEGSDD)
 
 ---
